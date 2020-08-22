@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700&display=swap");
+html, body {
+  height: 100vh;
+  margin: 0; }
+
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  height: 100vh; }
+
+.info {
+  position: unset; }
+  .info-inner {
+    margin-top: -50px; }
+  .info h1 {
+    font-size: 100px;
+    line-height: 85px;
+    width: 80%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .info .lead {
+    font-size: 30px;
+    margin-bottom: 40px;
+    margin-top: 5px;
+    color: #A9AAAC;
+    color: black; }
+  .info .data {
+    position: absolute;
+    margin-top: 50px;
+    bottom: 30px; }
+    .info .data a {
+      color: #A9AAAC;
+      color: black;
+      display: inline-block;
+      margin-right: 20px; }
+  .info .icon {
+    position: relative;
+    display: block;
+    width: 110px;
+    height: 110px; }
+    .info .icon img {
+      position: absolute;
+      top: 0;
+      max-width: 110px;
+      border-radius: 25px;
+      z-index: 1; }
+    .info .icon:after {
+      content: " ";
+      position: absolute;
+      bottom: -10px;
+      left: 10px;
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 35px;
+      filter: blur(35px);
+      background: #fb92e4;
+      opacity: 0.8;
+      z-index: 0; }
+  .info .download-button {
+    position: relative; }
+    .info .download-button img {
+      width: auto;
+      height: 70px; }
+    .info .download-button:after {
+      content: " ";
+      position: absolute;
+      bottom: -40px;
+      left: 20px;
+      display: block;
+      width: 80%;
+      height: 40px;
+      border-radius: 35px;
+      filter: blur(35px);
+      background: #000;
+      opacity: 0.3;
+      z-index: -1; }
+
+.empty-bag {
+  display: none;
+  position: relative; }
+  .empty-bag img:after {
+    content: " ";
+    position: absolute;
+    bottom: -40px;
+    left: 20px;
+    display: block;
+    width: 80%;
+    height: 40px;
+    border-radius: 35px;
+    filter: blur(35px);
+    background: #000;
+    opacity: 0.3;
+    z-index: -1; }
+  .empty-bag.show {
+    display: block; }
+
+@media (max-width: 1024px) {
+  .intro-container {
+    display: block; }
+  .info-inner {
+    margin: 50px 0;
+    text-align: center; }
+  .info h1 {
+    width: 100%; }
+  .info .data {
+    position: relative;
+    margin-top: 100px;
+    text-align: center; }
+  .info .icon {
+    margin: auto; }
+    .info .icon img {
+      left: 0; }
+  .items {
+    display: none; } }

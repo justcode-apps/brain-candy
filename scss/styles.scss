@@ -1,0 +1,195 @@
+//variables
+
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -ms-transition: $property;
+  transition: $property;
+}
+
+@mixin box-shadow($property) {
+  -webkit-box-shadow: $property;
+  -ms-box-shadow: $property;
+  box-shadow: $property;
+}
+
+@mixin border-radius($property) {
+  -webkit-border-radius: $property;
+  -ms-border-radius: $property;
+  border-radius: $property;
+}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+
+html, body {
+  height: 100vh;
+  margin: 0;
+//   overflow: hidden;
+//   background: #fb92e4;
+}
+
+.intro-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+	position: relative;
+	height: 100vh;
+}
+
+.info {
+	position: unset;
+	
+	&-inner {
+		margin-top: -50px;
+	}
+	h1 {
+		font-size: 100px;
+		line-height: 85px;
+		width: 80%;
+		font-family: "Montserrat", sans-serif;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	
+	.lead {
+		font-size: 30px;
+		margin-bottom: 40px;
+		margin-top: 5px;
+		color: #A9AAAC;
+		color: black;
+	}
+	
+	.data {
+		position: absolute;
+		margin-top: 50px;
+		bottom: 30px;
+		
+		a {
+			color: #A9AAAC;
+			color: black;
+			display: inline-block;
+			margin-right: 20px;
+		}
+	}
+	
+	.icon {
+		position: relative;
+		display: block;
+		width: 110px;
+		height: 110px;
+		img{
+			position: absolute;
+			top:0;
+			max-width: 110px;
+			border-radius: 25px;
+			z-index: 1;
+		}
+		
+		&:after {
+			content: " ";
+			position: absolute;
+			bottom: -10px;
+			left: 10px;
+			display: block;
+			width: 80px;
+			height: 80px;
+			border-radius: 35px;
+			filter: blur(35px);
+			background: #fb92e4;
+// 			background: #ccc;
+			opacity: 0.8;
+			z-index: 0;
+		}
+	}
+	
+	.download-button {
+		position: relative;
+		img {
+			width: auto;
+			height: 70px;
+		}
+		
+		&:after {
+			content: " ";
+			position: absolute;
+			bottom: -40px;
+			left: 20px;
+			display: block;
+			width: 80%;
+			height: 40px;
+			border-radius: 35px;
+			filter: blur(35px);
+			background: #000;
+			opacity: 0.3;
+			z-index: -1;					
+		}			
+	}
+}
+
+.empty-bag {
+	display: none;
+	position: relative;
+	
+	img {
+		&:after {
+			content: " ";
+			position: absolute;
+			bottom: -40px;
+			left: 20px;
+			display: block;
+			width: 80%;
+			height: 40px;
+			border-radius: 35px;
+			filter: blur(35px);
+			background: #000;
+			opacity: 0.3;
+			z-index: -1;					
+		}			
+	}
+	
+	&.show {
+		display: block;
+	}
+}
+
+
+@media (max-width: 1024px) {
+	.intro-container {
+		display: block;
+	}
+	
+	.info {
+		&-inner {
+			margin: 50px 0;
+			text-align: center;
+		}
+		
+		h1 {
+			width: 100%;
+		}
+		
+		.data {
+			position: relative;
+			margin-top: 100px;
+			text-align: center;
+		}
+		
+		.icon {
+			margin: auto;
+			
+			img {
+				left: 0;
+			}
+		}
+	}
+	
+	.items {
+		display: none;
+	}
+}
